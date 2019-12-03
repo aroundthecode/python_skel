@@ -1,7 +1,7 @@
 import logging
 import sys
 
-log = logging.getLogger("dynamic-inventory.infoblox")
+log = logging.getLogger("main")
 log_format = "%(asctime)s | %(levelname)9s | %(message)s"
 logging.basicConfig(format=log_format, level=logging.INFO)
 
