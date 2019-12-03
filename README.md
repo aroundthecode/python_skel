@@ -1,0 +1,1 @@
+Simplest python project skeleton for quick startup
