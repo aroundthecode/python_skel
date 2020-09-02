@@ -1,5 +1,12 @@
 all: build
 
+venv:
+	@python -m venv venv
+	@venv/bin/pip install -r requirements.txt
+	@echo
+	@echo "  *** remember to activate venv with ***"
+	@echo "  source ./venv/bin/activate"
+
 build:
 	@./venv/bin/pip install wheel
 	@./venv/bin/python setup.py sdist bdist_wheel
