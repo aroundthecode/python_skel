@@ -12,4 +12,12 @@ from os import path
 
 here = path.abspath(path.dirname(__file__))
 conf_dict = read_configuration('setup.cfg')
-setup()
+with open('requirements.txt') as f:
+    reqs = f.read().splitlines()
+
+requirements = [x for x in reqs if not x.startswith("#")]
+
+setup(
+    install_requires=requirements
+)
+
