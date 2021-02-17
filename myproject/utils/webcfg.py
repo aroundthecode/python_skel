@@ -19,16 +19,9 @@ VALID_PROPERTIES = {
     'log_level': 'INFO',
     'stop_timeout': '1',
     "cache_timeout": '60',
-    'docker_master': 'unix://var/run/docker.sock',
-    'backend': "k8",
-    'prometheus': "https://prometheus.preprod.k8.facilitylive.int",
-    'tiller_host': "auto",
-    'tiller_timeout': 300,
     'user': "",
     'password': "",
-    'spark_namespace': "spark",
     'debug_server': False,
-    'stop_token': "QW4gaW52YWxpZCByZXNwb25zZSB3YXMgcmVjZWl2ZWQgZnJvbSB0aGUgdXBzdHJlYW0gc2VydmVyLgoK",
     'profile': 'local'
 }
 
