@@ -77,4 +77,17 @@ and a swagger interface for all rest/*.py modules at [http://localhost:5000/apid
 
 or directly invoke sample API interface at [http://localhost:5000/sample/you](http://localhost:5000/sample/you)
 
+## Running Unit Test
 
+Put your code in tests folder and invoke
+```
+make test
+```
+
+for CLI report or
+```
+make test_report
+```
+
+
+for HTML report
