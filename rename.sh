@@ -7,7 +7,13 @@ read -p 'New project name (avoid spaces or special chars): ' NEWNAME
 
 for i in $(grep -Rl myproject myproject | grep -v "__pycache__")
 do
-    echo "Patching [${i}]"
+    echo "Patching code [${i}]"
+    sed -i '' 's/myproject/'${NEWNAME}'/g' ${i}
+done;
+
+for i in $(grep -Rl myproject tests | grep -v "__pycache__")
+do
+    echo "Patching test [${i}]"
     sed -i '' 's/myproject/'${NEWNAME}'/g' ${i}
 done;
 
