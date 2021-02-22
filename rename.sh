@@ -2,20 +2,20 @@
 
 echo "This script will rename all significat project section replacing 'myproject' with given name"
 echo
-read -p 'New project name: ' NEWNAME
+read -p 'New project name (avoid spaces or special chars): ' NEWNAME
 
 
 for i in $(grep -Rl myproject myproject | grep -v "__pycache__")
 do
     echo "Patching [${i}]"
-    sed -i '' 's/myproject/'${NEWNAME}'/' ${i}
+    sed -i '' 's/myproject/'${NEWNAME}'/g' ${i}
 done;
 
 echo "Patching setup.cfg"
-sed -i '' 's/myproject/'${NEWNAME}'/' setup.cfg
+sed -i '' 's/myproject/'${NEWNAME}'/g' setup.cfg
 
 echo "Patching Makefile"
-sed -i '' 's/myproject/'${NEWNAME}'/' Makefile
+sed -i '' 's/myproject/'${NEWNAME}'/g' Makefile
 
 echo "Renaming folder"
 mv myproject ${NEWNAME}
