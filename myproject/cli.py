@@ -25,7 +25,7 @@ def main(configuration):
     log.info("{} v{} ".format(config.name, config.get_version()))
     if configuration is None:
         filename = os.path.expanduser('~')
-        configuration = os.path.join(filename, ".devops-cli", "configuration.yaml")
+        configuration = os.path.join(filename, ".myproject", "configuration.yaml")
     global c
     c = Configuration(filename=configuration)
 
